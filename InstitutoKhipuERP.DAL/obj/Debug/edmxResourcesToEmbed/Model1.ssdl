@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InstitutoKhipuModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="InstitutoKhipuModelStoreContainer">
+    <EntitySet Name="TCarrera" EntityType="InstitutoKhipuModel.Store.TCarrera" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TCurso" EntityType="InstitutoKhipuModel.Store.TCurso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TDocente" EntityType="InstitutoKhipuModel.Store.TDocente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TEstudiante" EntityType="InstitutoKhipuModel.Store.TEstudiante" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TMatricula" EntityType="InstitutoKhipuModel.Store.TMatricula" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TMatriculaSemetre" EntityType="InstitutoKhipuModel.Store.TMatriculaSemetre" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TModuloCarrera" EntityType="InstitutoKhipuModel.Store.TModuloCarrera" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario" EntityType="InstitutoKhipuModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__TCurso__CodCarre__46E78A0C" Association="InstitutoKhipuModel.Store.FK__TCurso__CodCarre__46E78A0C">
+      <End Role="TCarrera" EntitySet="TCarrera" />
+      <End Role="TCurso" EntitySet="TCurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TCurso__CodModul__47DBAE45" Association="InstitutoKhipuModel.Store.FK__TCurso__CodModul__47DBAE45">
+      <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+      <End Role="TCurso" EntitySet="TCurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TEstudian__CodCa__4222D4EF" Association="InstitutoKhipuModel.Store.FK__TEstudian__CodCa__4222D4EF">
+      <End Role="TCarrera" EntitySet="TCarrera" />
+      <End Role="TEstudiante" EntitySet="TEstudiante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMatricul__CodCa__440B1D61" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodCa__440B1D61">
+      <End Role="TCarrera" EntitySet="TCarrera" />
+      <End Role="TMatricula" EntitySet="TMatricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMatricul__CodCu__48CFD27E" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodCu__48CFD27E">
+      <End Role="TCurso" EntitySet="TCurso" />
+      <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMatricul__CodDo__49C3F6B7" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodDo__49C3F6B7">
+      <End Role="TDocente" EntitySet="TDocente" />
+      <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMatricul__CodEs__44FF419A" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodEs__44FF419A">
+      <End Role="TEstudiante" EntitySet="TEstudiante" />
+      <End Role="TMatricula" EntitySet="TMatricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMatricul__CodEs__4AB81AF0" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodEs__4AB81AF0">
+      <End Role="TEstudiante" EntitySet="TEstudiante" />
+      <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMatricul__CodMa__4BAC3F29" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodMa__4BAC3F29">
+      <End Role="TMatricula" EntitySet="TMatricula" />
+      <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TMatricul__CodMo__45F365D3" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodMo__45F365D3">
+      <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+      <End Role="TMatricula" EntitySet="TMatricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TModuloCa__CodCa__4316F928" Association="InstitutoKhipuModel.Store.FK__TModuloCa__CodCa__4316F928">
+      <End Role="TCarrera" EntitySet="TCarrera" />
+      <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TCarrera">
+    <Key>
+      <PropertyRef Name="CodCarrera" />
+    </Key>
+    <Property Name="CodCarrera" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="NomCarrera" Type="varchar" MaxLength="70" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TCurso">
+    <Key>
+      <PropertyRef Name="CodCurso" />
+    </Key>
+    <Property Name="CodCurso" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="NomCurso" Type="varchar" MaxLength="70" />
+    <Property Name="Horas" Type="int" />
+    <Property Name="Creditos" Type="int" />
+    <Property Name="CodModulo" Type="varchar" MaxLength="10" />
+    <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="TDocente">
+    <Key>
+      <PropertyRef Name="CodDocente" />
+    </Key>
+    <Property Name="CodDocente" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="Dni" Type="varchar" MaxLength="8" />
+    <Property Name="ApePaterno" Type="varchar" MaxLength="50" />
+    <Property Name="ApeMaterno" Type="varchar" MaxLength="50" />
+    <Property Name="Nombres" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TEstudiante">
+    <Key>
+      <PropertyRef Name="CodEstudiante" />
+    </Key>
+    <Property Name="CodEstudiante" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="Dni" Type="varchar" MaxLength="8" />
+    <Property Name="ApePaterno" Type="varchar" MaxLength="50" />
+    <Property Name="ApeMaterno" Type="varchar" MaxLength="50" />
+    <Property Name="Nombres" Type="varchar" MaxLength="50" />
+    <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="TMatricula">
+    <Key>
+      <PropertyRef Name="CodMatricula" />
+    </Key>
+    <Property Name="CodMatricula" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CodEstudiante" Type="varchar" MaxLength="8" />
+    <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+    <Property Name="CodModulo" Type="varchar" MaxLength="10" />
+    <Property Name="Semestre" Type="varchar" MaxLength="8" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TMatriculaSemetre">
+    <Key>
+      <PropertyRef Name="CodMatriculaSemetre" />
+    </Key>
+    <Property Name="CodMatriculaSemetre" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CodMatricula" Type="varchar" MaxLength="8" />
+    <Property Name="CodEstudiante" Type="varchar" MaxLength="8" />
+    <Property Name="CodCurso" Type="varchar" MaxLength="8" />
+    <Property Name="CodDocente" Type="varchar" MaxLength="8" />
+    <Property Name="Semestre" Type="varchar" MaxLength="8" />
+    <Property Name="NomCurso" Type="varchar" MaxLength="70" />
+    <Property Name="NotaPromedio" Type="int" />
+  </EntityType>
+  <EntityType Name="TModuloCarrera">
+    <Key>
+      <PropertyRef Name="CodModulo" />
+    </Key>
+    <Property Name="CodModulo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+    <Property Name="NroModulo" Type="int" />
+    <Property Name="Semestre" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="CodUsuario" />
+    </Key>
+    <Property Name="CodUsuario" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="contraseña" Type="varchar" MaxLength="10" />
+    <Property Name="Tipo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__TCurso__CodCarre__46E78A0C">
+    <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+    <End Role="TCurso" Type="InstitutoKhipuModel.Store.TCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCarrera">
+        <PropertyRef Name="CodCarrera" />
+      </Principal>
+      <Dependent Role="TCurso">
+        <PropertyRef Name="CodCarrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TCurso__CodModul__47DBAE45">
+    <End Role="TModuloCarrera" Type="InstitutoKhipuModel.Store.TModuloCarrera" Multiplicity="0..1" />
+    <End Role="TCurso" Type="InstitutoKhipuModel.Store.TCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TModuloCarrera">
+        <PropertyRef Name="CodModulo" />
+      </Principal>
+      <Dependent Role="TCurso">
+        <PropertyRef Name="CodModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TEstudian__CodCa__4222D4EF">
+    <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+    <End Role="TEstudiante" Type="InstitutoKhipuModel.Store.TEstudiante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCarrera">
+        <PropertyRef Name="CodCarrera" />
+      </Principal>
+      <Dependent Role="TEstudiante">
+        <PropertyRef Name="CodCarrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMatricul__CodCa__440B1D61">
+    <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+    <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCarrera">
+        <PropertyRef Name="CodCarrera" />
+      </Principal>
+      <Dependent Role="TMatricula">
+        <PropertyRef Name="CodCarrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMatricul__CodCu__48CFD27E">
+    <End Role="TCurso" Type="InstitutoKhipuModel.Store.TCurso" Multiplicity="0..1" />
+    <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCurso">
+        <PropertyRef Name="CodCurso" />
+      </Principal>
+      <Dependent Role="TMatriculaSemetre">
+        <PropertyRef Name="CodCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMatricul__CodDo__49C3F6B7">
+    <End Role="TDocente" Type="InstitutoKhipuModel.Store.TDocente" Multiplicity="0..1" />
+    <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDocente">
+        <PropertyRef Name="CodDocente" />
+      </Principal>
+      <Dependent Role="TMatriculaSemetre">
+        <PropertyRef Name="CodDocente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMatricul__CodEs__44FF419A">
+    <End Role="TEstudiante" Type="InstitutoKhipuModel.Store.TEstudiante" Multiplicity="0..1" />
+    <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEstudiante">
+        <PropertyRef Name="CodEstudiante" />
+      </Principal>
+      <Dependent Role="TMatricula">
+        <PropertyRef Name="CodEstudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMatricul__CodEs__4AB81AF0">
+    <End Role="TEstudiante" Type="InstitutoKhipuModel.Store.TEstudiante" Multiplicity="0..1" />
+    <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEstudiante">
+        <PropertyRef Name="CodEstudiante" />
+      </Principal>
+      <Dependent Role="TMatriculaSemetre">
+        <PropertyRef Name="CodEstudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMatricul__CodMa__4BAC3F29">
+    <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="0..1" />
+    <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TMatricula">
+        <PropertyRef Name="CodMatricula" />
+      </Principal>
+      <Dependent Role="TMatriculaSemetre">
+        <PropertyRef Name="CodMatricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TMatricul__CodMo__45F365D3">
+    <End Role="TModuloCarrera" Type="InstitutoKhipuModel.Store.TModuloCarrera" Multiplicity="0..1" />
+    <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TModuloCarrera">
+        <PropertyRef Name="CodModulo" />
+      </Principal>
+      <Dependent Role="TMatricula">
+        <PropertyRef Name="CodModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TModuloCa__CodCa__4316F928">
+    <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+    <End Role="TModuloCarrera" Type="InstitutoKhipuModel.Store.TModuloCarrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCarrera">
+        <PropertyRef Name="CodCarrera" />
+      </Principal>
+      <Dependent Role="TModuloCarrera">
+        <PropertyRef Name="CodCarrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="TCarrera_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="NomCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TCarrera_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TCarrera_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TCarrera_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TCarrera_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="NomCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TCurso_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+    <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+    <Parameter Name="Horas" Type="int" Mode="In" />
+    <Parameter Name="Creditos" Type="int" Mode="In" />
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TCurso_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TCurso_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TCurso_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TCurso_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+    <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+    <Parameter Name="Horas" Type="int" Mode="In" />
+    <Parameter Name="Creditos" Type="int" Mode="In" />
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TDocente_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+    <Parameter Name="Dni" Type="varchar" Mode="In" />
+    <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Nombres" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TDocente_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TDocente_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TDocente_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TDocente_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+    <Parameter Name="Dni" Type="varchar" Mode="In" />
+    <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Nombres" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TEstudiante_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+    <Parameter Name="Dni" Type="varchar" Mode="In" />
+    <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Nombres" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TEstudiante_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TEstudiante_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TEstudiante_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TEstudiante_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+    <Parameter Name="Dni" Type="varchar" Mode="In" />
+    <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Nombres" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TMatricula_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+    <Parameter Name="Semestre" Type="varchar" Mode="In" />
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="TMatricula_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TMatricula_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TMatricula_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TMatricula_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+    <Parameter Name="Semestre" Type="varchar" Mode="In" />
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="TMatriculaSemetre_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+    <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+    <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+    <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+    <Parameter Name="Semestre" Type="varchar" Mode="In" />
+    <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+    <Parameter Name="NotaPromedio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TMatriculaSemetre_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TMatriculaSemetre_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TMatriculaSemetre_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TMatriculaSemetre_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+    <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+    <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+    <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+    <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+    <Parameter Name="Semestre" Type="varchar" Mode="In" />
+    <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+    <Parameter Name="NotaPromedio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TModuloCarrera_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="NroModulo" Type="int" Mode="In" />
+    <Parameter Name="Semestre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TModuloCarrera_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TModuloCarrera_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TModuloCarrera_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TModuloCarrera_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+    <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+    <Parameter Name="NroModulo" Type="int" Mode="In" />
+    <Parameter Name="Semestre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usuario_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="contraseña" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usuario_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usuario_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Usuario_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usuario_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="contraseña" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

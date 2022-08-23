@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TCarrera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCarrera" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomCarrera" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TCarrera" nillable="true" type="tns:TCarrera" />
+  <xs:complexType name="ListaTCarrera">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TCarrera" nillable="true" type="tns:TCarrera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTCarrera" nillable="true" type="tns:ListaTCarrera" />
+  <xs:complexType name="TCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCarrera" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodCurso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodModulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Creditos" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Horas" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NomCurso" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TCurso" nillable="true" type="tns:TCurso" />
+  <xs:complexType name="ListaTCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TCurso" nillable="true" type="tns:TCurso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTCurso" nillable="true" type="tns:ListaTCurso" />
+  <xs:complexType name="TDocente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApeMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApePaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodDocente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TDocente" nillable="true" type="tns:TDocente" />
+  <xs:complexType name="ListaTDocente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TDocente" nillable="true" type="tns:TDocente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTDocente" nillable="true" type="tns:ListaTDocente" />
+  <xs:complexType name="TEstudiante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApeMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApePaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodCarrera" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodEstudiante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TEstudiante" nillable="true" type="tns:TEstudiante" />
+  <xs:complexType name="ListaTEstudiante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TEstudiante" nillable="true" type="tns:TEstudiante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTEstudiante" nillable="true" type="tns:ListaTEstudiante" />
+  <xs:complexType name="TMatricula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCarrera" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodEstudiante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodMatricula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodModulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Semestre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TMatricula" nillable="true" type="tns:TMatricula" />
+  <xs:complexType name="ListaTMatricula">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TMatricula" nillable="true" type="tns:TMatricula" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTMatricula" nillable="true" type="tns:ListaTMatricula" />
+  <xs:complexType name="TMatriculaSemetre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCurso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodDocente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodEstudiante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodMatricula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodMatriculaSemetre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomCurso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotaPromedio" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Semestre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TMatriculaSemetre" nillable="true" type="tns:TMatriculaSemetre" />
+  <xs:complexType name="ListaTMatriculaSemetre">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TMatriculaSemetre" nillable="true" type="tns:TMatriculaSemetre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTMatriculaSemetre" nillable="true" type="tns:ListaTMatriculaSemetre" />
+  <xs:complexType name="TModuloCarrera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCarrera" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodModulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroModulo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Semestre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TModuloCarrera" nillable="true" type="tns:TModuloCarrera" />
+  <xs:complexType name="ListaTModuloCarrera">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TModuloCarrera" nillable="true" type="tns:TModuloCarrera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaTModuloCarrera" nillable="true" type="tns:ListaTModuloCarrera" />
+  <xs:complexType name="Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contraseña" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+</xs:schema>

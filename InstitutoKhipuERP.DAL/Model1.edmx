@@ -1,0 +1,1341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="InstitutoKhipuModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="InstitutoKhipuModelStoreContainer">
+          <EntitySet Name="TCarrera" EntityType="InstitutoKhipuModel.Store.TCarrera" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TCurso" EntityType="InstitutoKhipuModel.Store.TCurso" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TDocente" EntityType="InstitutoKhipuModel.Store.TDocente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TEstudiante" EntityType="InstitutoKhipuModel.Store.TEstudiante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TMatricula" EntityType="InstitutoKhipuModel.Store.TMatricula" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TMatriculaSemetre" EntityType="InstitutoKhipuModel.Store.TMatriculaSemetre" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TModuloCarrera" EntityType="InstitutoKhipuModel.Store.TModuloCarrera" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="InstitutoKhipuModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__TCurso__CodCarre__46E78A0C" Association="InstitutoKhipuModel.Store.FK__TCurso__CodCarre__46E78A0C">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TCurso" EntitySet="TCurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TCurso__CodModul__47DBAE45" Association="InstitutoKhipuModel.Store.FK__TCurso__CodModul__47DBAE45">
+            <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+            <End Role="TCurso" EntitySet="TCurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEstudian__CodCa__4222D4EF" Association="InstitutoKhipuModel.Store.FK__TEstudian__CodCa__4222D4EF">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodCa__440B1D61" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodCa__440B1D61">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TMatricula" EntitySet="TMatricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodCu__48CFD27E" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodCu__48CFD27E">
+            <End Role="TCurso" EntitySet="TCurso" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodDo__49C3F6B7" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodDo__49C3F6B7">
+            <End Role="TDocente" EntitySet="TDocente" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodEs__44FF419A" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodEs__44FF419A">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TMatricula" EntitySet="TMatricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodEs__4AB81AF0" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodEs__4AB81AF0">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodMa__4BAC3F29" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodMa__4BAC3F29">
+            <End Role="TMatricula" EntitySet="TMatricula" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodMo__45F365D3" Association="InstitutoKhipuModel.Store.FK__TMatricul__CodMo__45F365D3">
+            <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+            <End Role="TMatricula" EntitySet="TMatricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TModuloCa__CodCa__4316F928" Association="InstitutoKhipuModel.Store.FK__TModuloCa__CodCa__4316F928">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TCarrera">
+          <Key>
+            <PropertyRef Name="CodCarrera" />
+          </Key>
+          <Property Name="CodCarrera" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="NomCarrera" Type="varchar" MaxLength="70" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TCurso">
+          <Key>
+            <PropertyRef Name="CodCurso" />
+          </Key>
+          <Property Name="CodCurso" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="NomCurso" Type="varchar" MaxLength="70" />
+          <Property Name="Horas" Type="int" />
+          <Property Name="Creditos" Type="int" />
+          <Property Name="CodModulo" Type="varchar" MaxLength="10" />
+          <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="TDocente">
+          <Key>
+            <PropertyRef Name="CodDocente" />
+          </Key>
+          <Property Name="CodDocente" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Dni" Type="varchar" MaxLength="8" />
+          <Property Name="ApePaterno" Type="varchar" MaxLength="50" />
+          <Property Name="ApeMaterno" Type="varchar" MaxLength="50" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TEstudiante">
+          <Key>
+            <PropertyRef Name="CodEstudiante" />
+          </Key>
+          <Property Name="CodEstudiante" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Dni" Type="varchar" MaxLength="8" />
+          <Property Name="ApePaterno" Type="varchar" MaxLength="50" />
+          <Property Name="ApeMaterno" Type="varchar" MaxLength="50" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+          <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="TMatricula">
+          <Key>
+            <PropertyRef Name="CodMatricula" />
+          </Key>
+          <Property Name="CodMatricula" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="CodEstudiante" Type="varchar" MaxLength="8" />
+          <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+          <Property Name="CodModulo" Type="varchar" MaxLength="10" />
+          <Property Name="Semestre" Type="varchar" MaxLength="8" />
+          <Property Name="Fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TMatriculaSemetre">
+          <Key>
+            <PropertyRef Name="CodMatriculaSemetre" />
+          </Key>
+          <Property Name="CodMatriculaSemetre" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="CodMatricula" Type="varchar" MaxLength="8" />
+          <Property Name="CodEstudiante" Type="varchar" MaxLength="8" />
+          <Property Name="CodCurso" Type="varchar" MaxLength="8" />
+          <Property Name="CodDocente" Type="varchar" MaxLength="8" />
+          <Property Name="Semestre" Type="varchar" MaxLength="8" />
+          <Property Name="NomCurso" Type="varchar" MaxLength="70" />
+          <Property Name="NotaPromedio" Type="int" />
+        </EntityType>
+        <EntityType Name="TModuloCarrera">
+          <Key>
+            <PropertyRef Name="CodModulo" />
+          </Key>
+          <Property Name="CodModulo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="CodCarrera" Type="varchar" MaxLength="4" />
+          <Property Name="NroModulo" Type="int" />
+          <Property Name="Semestre" Type="varchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="CodUsuario" />
+          </Key>
+          <Property Name="CodUsuario" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="contraseña" Type="varchar" MaxLength="10" />
+          <Property Name="Tipo" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK__TCurso__CodCarre__46E78A0C">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+          <End Role="TCurso" Type="InstitutoKhipuModel.Store.TCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TCurso">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TCurso__CodModul__47DBAE45">
+          <End Role="TModuloCarrera" Type="InstitutoKhipuModel.Store.TModuloCarrera" Multiplicity="0..1" />
+          <End Role="TCurso" Type="InstitutoKhipuModel.Store.TCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TModuloCarrera">
+              <PropertyRef Name="CodModulo" />
+            </Principal>
+            <Dependent Role="TCurso">
+              <PropertyRef Name="CodModulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEstudian__CodCa__4222D4EF">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+          <End Role="TEstudiante" Type="InstitutoKhipuModel.Store.TEstudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TEstudiante">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodCa__440B1D61">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+          <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TMatricula">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodCu__48CFD27E">
+          <End Role="TCurso" Type="InstitutoKhipuModel.Store.TCurso" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCurso">
+              <PropertyRef Name="CodCurso" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodCurso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodDo__49C3F6B7">
+          <End Role="TDocente" Type="InstitutoKhipuModel.Store.TDocente" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TDocente">
+              <PropertyRef Name="CodDocente" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodDocente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodEs__44FF419A">
+          <End Role="TEstudiante" Type="InstitutoKhipuModel.Store.TEstudiante" Multiplicity="0..1" />
+          <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="CodEstudiante" />
+            </Principal>
+            <Dependent Role="TMatricula">
+              <PropertyRef Name="CodEstudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodEs__4AB81AF0">
+          <End Role="TEstudiante" Type="InstitutoKhipuModel.Store.TEstudiante" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="CodEstudiante" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodEstudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodMa__4BAC3F29">
+          <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.Store.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TMatricula">
+              <PropertyRef Name="CodMatricula" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodMatricula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodMo__45F365D3">
+          <End Role="TModuloCarrera" Type="InstitutoKhipuModel.Store.TModuloCarrera" Multiplicity="0..1" />
+          <End Role="TMatricula" Type="InstitutoKhipuModel.Store.TMatricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TModuloCarrera">
+              <PropertyRef Name="CodModulo" />
+            </Principal>
+            <Dependent Role="TMatricula">
+              <PropertyRef Name="CodModulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TModuloCa__CodCa__4316F928">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.Store.TCarrera" Multiplicity="0..1" />
+          <End Role="TModuloCarrera" Type="InstitutoKhipuModel.Store.TModuloCarrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TModuloCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="TCarrera_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="NomCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TCarrera_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TCarrera_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TCarrera_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TCarrera_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="NomCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TCurso_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+          <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+          <Parameter Name="Horas" Type="int" Mode="In" />
+          <Parameter Name="Creditos" Type="int" Mode="In" />
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TCurso_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TCurso_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TCurso_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TCurso_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+          <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+          <Parameter Name="Horas" Type="int" Mode="In" />
+          <Parameter Name="Creditos" Type="int" Mode="In" />
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TDocente_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+          <Parameter Name="Dni" Type="varchar" Mode="In" />
+          <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+          <Parameter Name="Nombres" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TDocente_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TDocente_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TDocente_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TDocente_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+          <Parameter Name="Dni" Type="varchar" Mode="In" />
+          <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+          <Parameter Name="Nombres" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TEstudiante_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+          <Parameter Name="Dni" Type="varchar" Mode="In" />
+          <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+          <Parameter Name="Nombres" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TEstudiante_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TEstudiante_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TEstudiante_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TEstudiante_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+          <Parameter Name="Dni" Type="varchar" Mode="In" />
+          <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+          <Parameter Name="Nombres" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TMatricula_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+          <Parameter Name="Semestre" Type="varchar" Mode="In" />
+          <Parameter Name="Fecha" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="TMatricula_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TMatricula_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TMatricula_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TMatricula_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+          <Parameter Name="Semestre" Type="varchar" Mode="In" />
+          <Parameter Name="Fecha" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="TMatriculaSemetre_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+          <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+          <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+          <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+          <Parameter Name="Semestre" Type="varchar" Mode="In" />
+          <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+          <Parameter Name="NotaPromedio" Type="int" Mode="In" />
+        </Function>
+        <Function Name="TMatriculaSemetre_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TMatriculaSemetre_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TMatriculaSemetre_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TMatriculaSemetre_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodMatriculaSemetre" Type="varchar" Mode="In" />
+          <Parameter Name="CodMatricula" Type="varchar" Mode="In" />
+          <Parameter Name="CodEstudiante" Type="varchar" Mode="In" />
+          <Parameter Name="CodCurso" Type="varchar" Mode="In" />
+          <Parameter Name="CodDocente" Type="varchar" Mode="In" />
+          <Parameter Name="Semestre" Type="varchar" Mode="In" />
+          <Parameter Name="NomCurso" Type="varchar" Mode="In" />
+          <Parameter Name="NotaPromedio" Type="int" Mode="In" />
+        </Function>
+        <Function Name="TModuloCarrera_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="NroModulo" Type="int" Mode="In" />
+          <Parameter Name="Semestre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TModuloCarrera_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TModuloCarrera_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TModuloCarrera_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TModuloCarrera_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodModulo" Type="varchar" Mode="In" />
+          <Parameter Name="CodCarrera" Type="varchar" Mode="In" />
+          <Parameter Name="NroModulo" Type="int" Mode="In" />
+          <Parameter Name="Semestre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Usuario_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="contraseña" Type="varchar" Mode="In" />
+          <Parameter Name="Tipo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Usuario_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Usuario_ReadAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Usuario_ReadById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Usuario_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="contraseña" Type="varchar" Mode="In" />
+          <Parameter Name="Tipo" Type="varchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InstitutoKhipuModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="InstitutoKhipuEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="TCarrera" EntityType="InstitutoKhipuModel.TCarrera" />
+          <EntitySet Name="TCurso" EntityType="InstitutoKhipuModel.TCurso" />
+          <EntitySet Name="TDocente" EntityType="InstitutoKhipuModel.TDocente" />
+          <EntitySet Name="TEstudiante" EntityType="InstitutoKhipuModel.TEstudiante" />
+          <EntitySet Name="TMatricula" EntityType="InstitutoKhipuModel.TMatricula" />
+          <EntitySet Name="TMatriculaSemetre" EntityType="InstitutoKhipuModel.TMatriculaSemetre" />
+          <EntitySet Name="TModuloCarrera" EntityType="InstitutoKhipuModel.TModuloCarrera" />
+          <EntitySet Name="Usuario" EntityType="InstitutoKhipuModel.Usuario" />
+          <AssociationSet Name="FK__TCurso__CodCarre__46E78A0C" Association="InstitutoKhipuModel.FK__TCurso__CodCarre__46E78A0C">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TCurso" EntitySet="TCurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEstudian__CodCa__4222D4EF" Association="InstitutoKhipuModel.FK__TEstudian__CodCa__4222D4EF">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodCa__440B1D61" Association="InstitutoKhipuModel.FK__TMatricul__CodCa__440B1D61">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TMatricula" EntitySet="TMatricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TModuloCa__CodCa__4316F928" Association="InstitutoKhipuModel.FK__TModuloCa__CodCa__4316F928">
+            <End Role="TCarrera" EntitySet="TCarrera" />
+            <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TCurso__CodModul__47DBAE45" Association="InstitutoKhipuModel.FK__TCurso__CodModul__47DBAE45">
+            <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+            <End Role="TCurso" EntitySet="TCurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodCu__48CFD27E" Association="InstitutoKhipuModel.FK__TMatricul__CodCu__48CFD27E">
+            <End Role="TCurso" EntitySet="TCurso" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodDo__49C3F6B7" Association="InstitutoKhipuModel.FK__TMatricul__CodDo__49C3F6B7">
+            <End Role="TDocente" EntitySet="TDocente" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodEs__44FF419A" Association="InstitutoKhipuModel.FK__TMatricul__CodEs__44FF419A">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TMatricula" EntitySet="TMatricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodEs__4AB81AF0" Association="InstitutoKhipuModel.FK__TMatricul__CodEs__4AB81AF0">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodMa__4BAC3F29" Association="InstitutoKhipuModel.FK__TMatricul__CodMa__4BAC3F29">
+            <End Role="TMatricula" EntitySet="TMatricula" />
+            <End Role="TMatriculaSemetre" EntitySet="TMatriculaSemetre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TMatricul__CodMo__45F365D3" Association="InstitutoKhipuModel.FK__TMatricul__CodMo__45F365D3">
+            <End Role="TModuloCarrera" EntitySet="TModuloCarrera" />
+            <End Role="TMatricula" EntitySet="TMatricula" />
+          </AssociationSet>
+          <FunctionImport Name="TCarrera_Create">
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+            <Parameter Name="NomCarrera" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TCarrera_Delete">
+          <Parameter Name="CodCarrera" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TCarrera_ReadAll" ReturnType="Collection(InstitutoKhipuModel.TCarrera_ReadAll_Result)" />
+          <FunctionImport Name="TCarrera_ReadById" ReturnType="Collection(InstitutoKhipuModel.TCarrera_ReadById_Result)">
+          <Parameter Name="CodCarrera" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TCarrera_Update">
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+            <Parameter Name="NomCarrera" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TCurso_Create">
+            <Parameter Name="CodCurso" Mode="In" Type="String" />
+            <Parameter Name="NomCurso" Mode="In" Type="String" />
+            <Parameter Name="Horas" Mode="In" Type="Int32" />
+            <Parameter Name="Creditos" Mode="In" Type="Int32" />
+            <Parameter Name="CodModulo" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TCurso_Delete">
+          <Parameter Name="CodCurso" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TCurso_ReadAll" ReturnType="Collection(InstitutoKhipuModel.TCurso_ReadAll_Result)" />
+          <FunctionImport Name="TCurso_ReadById" ReturnType="Collection(InstitutoKhipuModel.TCurso_ReadById_Result)">
+          <Parameter Name="CodCurso" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TCurso_Update">
+            <Parameter Name="CodCurso" Mode="In" Type="String" />
+            <Parameter Name="NomCurso" Mode="In" Type="String" />
+            <Parameter Name="Horas" Mode="In" Type="Int32" />
+            <Parameter Name="Creditos" Mode="In" Type="Int32" />
+            <Parameter Name="CodModulo" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TDocente_Create">
+            <Parameter Name="CodDocente" Mode="In" Type="String" />
+            <Parameter Name="Dni" Mode="In" Type="String" />
+            <Parameter Name="ApePaterno" Mode="In" Type="String" />
+            <Parameter Name="ApeMaterno" Mode="In" Type="String" />
+            <Parameter Name="Nombres" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TDocente_Delete">
+          <Parameter Name="CodDocente" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TDocente_ReadAll" ReturnType="Collection(InstitutoKhipuModel.TDocente_ReadAll_Result)" />
+          <FunctionImport Name="TDocente_ReadById" ReturnType="Collection(InstitutoKhipuModel.TDocente_ReadById_Result)">
+          <Parameter Name="CodDocente" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TDocente_Update">
+            <Parameter Name="CodDocente" Mode="In" Type="String" />
+            <Parameter Name="Dni" Mode="In" Type="String" />
+            <Parameter Name="ApePaterno" Mode="In" Type="String" />
+            <Parameter Name="ApeMaterno" Mode="In" Type="String" />
+            <Parameter Name="Nombres" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TEstudiante_Create">
+            <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+            <Parameter Name="Dni" Mode="In" Type="String" />
+            <Parameter Name="ApePaterno" Mode="In" Type="String" />
+            <Parameter Name="ApeMaterno" Mode="In" Type="String" />
+            <Parameter Name="Nombres" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TEstudiante_Delete">
+          <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TEstudiante_ReadAll" ReturnType="Collection(InstitutoKhipuModel.TEstudiante_ReadAll_Result)" />
+          <FunctionImport Name="TEstudiante_ReadById" ReturnType="Collection(InstitutoKhipuModel.TEstudiante_ReadById_Result)">
+          <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TEstudiante_Update">
+            <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+            <Parameter Name="Dni" Mode="In" Type="String" />
+            <Parameter Name="ApePaterno" Mode="In" Type="String" />
+            <Parameter Name="ApeMaterno" Mode="In" Type="String" />
+            <Parameter Name="Nombres" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TMatricula_Create">
+            <Parameter Name="CodMatricula" Mode="In" Type="String" />
+            <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+            <Parameter Name="CodModulo" Mode="In" Type="String" />
+            <Parameter Name="Semestre" Mode="In" Type="String" />
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="TMatricula_Delete">
+          <Parameter Name="CodMatricula" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TMatricula_ReadAll" ReturnType="Collection(InstitutoKhipuModel.TMatricula_ReadAll_Result)" />
+          <FunctionImport Name="TMatricula_ReadById" ReturnType="Collection(InstitutoKhipuModel.TMatricula_ReadById_Result)">
+          <Parameter Name="CodMatricula" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TMatricula_Update">
+            <Parameter Name="CodMatricula" Mode="In" Type="String" />
+            <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+            <Parameter Name="CodModulo" Mode="In" Type="String" />
+            <Parameter Name="Semestre" Mode="In" Type="String" />
+            <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="TMatriculaSemetre_Create">
+            <Parameter Name="CodMatriculaSemetre" Mode="In" Type="String" />
+            <Parameter Name="CodMatricula" Mode="In" Type="String" />
+            <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+            <Parameter Name="CodCurso" Mode="In" Type="String" />
+            <Parameter Name="CodDocente" Mode="In" Type="String" />
+            <Parameter Name="Semestre" Mode="In" Type="String" />
+            <Parameter Name="NomCurso" Mode="In" Type="String" />
+            <Parameter Name="NotaPromedio" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="TMatriculaSemetre_Delete">
+          <Parameter Name="CodMatriculaSemetre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TMatriculaSemetre_ReadAll" ReturnType="Collection(InstitutoKhipuModel.TMatriculaSemetre_ReadAll_Result)" />
+          <FunctionImport Name="TMatriculaSemetre_ReadById" ReturnType="Collection(InstitutoKhipuModel.TMatriculaSemetre_ReadById_Result)">
+          <Parameter Name="CodMatriculaSemetre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TMatriculaSemetre_Update">
+            <Parameter Name="CodMatriculaSemetre" Mode="In" Type="String" />
+            <Parameter Name="CodMatricula" Mode="In" Type="String" />
+            <Parameter Name="CodEstudiante" Mode="In" Type="String" />
+            <Parameter Name="CodCurso" Mode="In" Type="String" />
+            <Parameter Name="CodDocente" Mode="In" Type="String" />
+            <Parameter Name="Semestre" Mode="In" Type="String" />
+            <Parameter Name="NomCurso" Mode="In" Type="String" />
+            <Parameter Name="NotaPromedio" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="TModuloCarrera_Create">
+            <Parameter Name="CodModulo" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+            <Parameter Name="NroModulo" Mode="In" Type="Int32" />
+            <Parameter Name="Semestre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TModuloCarrera_Delete">
+          <Parameter Name="CodModulo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TModuloCarrera_ReadAll" ReturnType="Collection(InstitutoKhipuModel.TModuloCarrera_ReadAll_Result)" />
+          <FunctionImport Name="TModuloCarrera_ReadById" ReturnType="Collection(InstitutoKhipuModel.TModuloCarrera_ReadById_Result)">
+          <Parameter Name="CodModulo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TModuloCarrera_Update">
+            <Parameter Name="CodModulo" Mode="In" Type="String" />
+            <Parameter Name="CodCarrera" Mode="In" Type="String" />
+            <Parameter Name="NroModulo" Mode="In" Type="Int32" />
+            <Parameter Name="Semestre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Usuario_Create">
+            <Parameter Name="CodUsuario" Mode="In" Type="String" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+            <Parameter Name="Tipo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Usuario_Delete">
+          <Parameter Name="CodUsuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Usuario_ReadAll" ReturnType="Collection(InstitutoKhipuModel.Usuario_ReadAll_Result)" />
+          <FunctionImport Name="Usuario_ReadById" ReturnType="Collection(InstitutoKhipuModel.Usuario_ReadById_Result)">
+          <Parameter Name="CodUsuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Usuario_Update">
+            <Parameter Name="CodUsuario" Mode="In" Type="String" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+            <Parameter Name="Tipo" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="TCarrera">
+          <Key>
+            <PropertyRef Name="CodCarrera" />
+          </Key>
+          <Property Name="CodCarrera" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="NomCarrera" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TCurso" Relationship="InstitutoKhipuModel.FK__TCurso__CodCarre__46E78A0C" FromRole="TCarrera" ToRole="TCurso" />
+          <NavigationProperty Name="TEstudiante" Relationship="InstitutoKhipuModel.FK__TEstudian__CodCa__4222D4EF" FromRole="TCarrera" ToRole="TEstudiante" />
+          <NavigationProperty Name="TMatricula" Relationship="InstitutoKhipuModel.FK__TMatricul__CodCa__440B1D61" FromRole="TCarrera" ToRole="TMatricula" />
+          <NavigationProperty Name="TModuloCarrera" Relationship="InstitutoKhipuModel.FK__TModuloCa__CodCa__4316F928" FromRole="TCarrera" ToRole="TModuloCarrera" />
+        </EntityType>
+        <EntityType Name="TCurso">
+          <Key>
+            <PropertyRef Name="CodCurso" />
+          </Key>
+          <Property Name="CodCurso" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="NomCurso" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="Horas" Type="Int32" />
+          <Property Name="Creditos" Type="Int32" />
+          <Property Name="CodModulo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CodCarrera" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TCarrera" Relationship="InstitutoKhipuModel.FK__TCurso__CodCarre__46E78A0C" FromRole="TCurso" ToRole="TCarrera" />
+          <NavigationProperty Name="TModuloCarrera" Relationship="InstitutoKhipuModel.FK__TCurso__CodModul__47DBAE45" FromRole="TCurso" ToRole="TModuloCarrera" />
+          <NavigationProperty Name="TMatriculaSemetre" Relationship="InstitutoKhipuModel.FK__TMatricul__CodCu__48CFD27E" FromRole="TCurso" ToRole="TMatriculaSemetre" />
+        </EntityType>
+        <EntityType Name="TDocente">
+          <Key>
+            <PropertyRef Name="CodDocente" />
+          </Key>
+          <Property Name="CodDocente" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Dni" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="ApePaterno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ApeMaterno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Nombres" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TMatriculaSemetre" Relationship="InstitutoKhipuModel.FK__TMatricul__CodDo__49C3F6B7" FromRole="TDocente" ToRole="TMatriculaSemetre" />
+        </EntityType>
+        <EntityType Name="TEstudiante">
+          <Key>
+            <PropertyRef Name="CodEstudiante" />
+          </Key>
+          <Property Name="CodEstudiante" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Dni" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="ApePaterno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ApeMaterno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Nombres" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CodCarrera" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TCarrera" Relationship="InstitutoKhipuModel.FK__TEstudian__CodCa__4222D4EF" FromRole="TEstudiante" ToRole="TCarrera" />
+          <NavigationProperty Name="TMatricula" Relationship="InstitutoKhipuModel.FK__TMatricul__CodEs__44FF419A" FromRole="TEstudiante" ToRole="TMatricula" />
+          <NavigationProperty Name="TMatriculaSemetre" Relationship="InstitutoKhipuModel.FK__TMatricul__CodEs__4AB81AF0" FromRole="TEstudiante" ToRole="TMatriculaSemetre" />
+        </EntityType>
+        <EntityType Name="TMatricula">
+          <Key>
+            <PropertyRef Name="CodMatricula" />
+          </Key>
+          <Property Name="CodMatricula" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="CodEstudiante" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="CodCarrera" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="CodModulo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Semestre" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="TCarrera" Relationship="InstitutoKhipuModel.FK__TMatricul__CodCa__440B1D61" FromRole="TMatricula" ToRole="TCarrera" />
+          <NavigationProperty Name="TEstudiante" Relationship="InstitutoKhipuModel.FK__TMatricul__CodEs__44FF419A" FromRole="TMatricula" ToRole="TEstudiante" />
+          <NavigationProperty Name="TMatriculaSemetre" Relationship="InstitutoKhipuModel.FK__TMatricul__CodMa__4BAC3F29" FromRole="TMatricula" ToRole="TMatriculaSemetre" />
+          <NavigationProperty Name="TModuloCarrera" Relationship="InstitutoKhipuModel.FK__TMatricul__CodMo__45F365D3" FromRole="TMatricula" ToRole="TModuloCarrera" />
+        </EntityType>
+        <EntityType Name="TMatriculaSemetre">
+          <Key>
+            <PropertyRef Name="CodMatriculaSemetre" />
+          </Key>
+          <Property Name="CodMatriculaSemetre" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="CodMatricula" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="CodEstudiante" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="CodCurso" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="CodDocente" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Semestre" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="NomCurso" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="NotaPromedio" Type="Int32" />
+          <NavigationProperty Name="TCurso" Relationship="InstitutoKhipuModel.FK__TMatricul__CodCu__48CFD27E" FromRole="TMatriculaSemetre" ToRole="TCurso" />
+          <NavigationProperty Name="TDocente" Relationship="InstitutoKhipuModel.FK__TMatricul__CodDo__49C3F6B7" FromRole="TMatriculaSemetre" ToRole="TDocente" />
+          <NavigationProperty Name="TEstudiante" Relationship="InstitutoKhipuModel.FK__TMatricul__CodEs__4AB81AF0" FromRole="TMatriculaSemetre" ToRole="TEstudiante" />
+          <NavigationProperty Name="TMatricula" Relationship="InstitutoKhipuModel.FK__TMatricul__CodMa__4BAC3F29" FromRole="TMatriculaSemetre" ToRole="TMatricula" />
+        </EntityType>
+        <EntityType Name="TModuloCarrera">
+          <Key>
+            <PropertyRef Name="CodModulo" />
+          </Key>
+          <Property Name="CodModulo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CodCarrera" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="NroModulo" Type="Int32" />
+          <Property Name="Semestre" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TCarrera" Relationship="InstitutoKhipuModel.FK__TModuloCa__CodCa__4316F928" FromRole="TModuloCarrera" ToRole="TCarrera" />
+          <NavigationProperty Name="TCurso" Relationship="InstitutoKhipuModel.FK__TCurso__CodModul__47DBAE45" FromRole="TModuloCarrera" ToRole="TCurso" />
+          <NavigationProperty Name="TMatricula" Relationship="InstitutoKhipuModel.FK__TMatricul__CodMo__45F365D3" FromRole="TModuloCarrera" ToRole="TMatricula" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="CodUsuario" />
+          </Key>
+          <Property Name="CodUsuario" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="contraseña" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Tipo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__TCurso__CodCarre__46E78A0C">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.TCarrera" Multiplicity="0..1" />
+          <End Role="TCurso" Type="InstitutoKhipuModel.TCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TCurso">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEstudian__CodCa__4222D4EF">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.TCarrera" Multiplicity="0..1" />
+          <End Role="TEstudiante" Type="InstitutoKhipuModel.TEstudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TEstudiante">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodCa__440B1D61">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.TCarrera" Multiplicity="0..1" />
+          <End Role="TMatricula" Type="InstitutoKhipuModel.TMatricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TMatricula">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TModuloCa__CodCa__4316F928">
+          <End Role="TCarrera" Type="InstitutoKhipuModel.TCarrera" Multiplicity="0..1" />
+          <End Role="TModuloCarrera" Type="InstitutoKhipuModel.TModuloCarrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Principal>
+            <Dependent Role="TModuloCarrera">
+              <PropertyRef Name="CodCarrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TCurso__CodModul__47DBAE45">
+          <End Role="TModuloCarrera" Type="InstitutoKhipuModel.TModuloCarrera" Multiplicity="0..1" />
+          <End Role="TCurso" Type="InstitutoKhipuModel.TCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TModuloCarrera">
+              <PropertyRef Name="CodModulo" />
+            </Principal>
+            <Dependent Role="TCurso">
+              <PropertyRef Name="CodModulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodCu__48CFD27E">
+          <End Role="TCurso" Type="InstitutoKhipuModel.TCurso" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCurso">
+              <PropertyRef Name="CodCurso" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodCurso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodDo__49C3F6B7">
+          <End Role="TDocente" Type="InstitutoKhipuModel.TDocente" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TDocente">
+              <PropertyRef Name="CodDocente" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodDocente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodEs__44FF419A">
+          <End Role="TEstudiante" Type="InstitutoKhipuModel.TEstudiante" Multiplicity="0..1" />
+          <End Role="TMatricula" Type="InstitutoKhipuModel.TMatricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="CodEstudiante" />
+            </Principal>
+            <Dependent Role="TMatricula">
+              <PropertyRef Name="CodEstudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodEs__4AB81AF0">
+          <End Role="TEstudiante" Type="InstitutoKhipuModel.TEstudiante" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="CodEstudiante" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodEstudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodMa__4BAC3F29">
+          <End Role="TMatricula" Type="InstitutoKhipuModel.TMatricula" Multiplicity="0..1" />
+          <End Role="TMatriculaSemetre" Type="InstitutoKhipuModel.TMatriculaSemetre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TMatricula">
+              <PropertyRef Name="CodMatricula" />
+            </Principal>
+            <Dependent Role="TMatriculaSemetre">
+              <PropertyRef Name="CodMatricula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TMatricul__CodMo__45F365D3">
+          <End Role="TModuloCarrera" Type="InstitutoKhipuModel.TModuloCarrera" Multiplicity="0..1" />
+          <End Role="TMatricula" Type="InstitutoKhipuModel.TMatricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TModuloCarrera">
+              <PropertyRef Name="CodModulo" />
+            </Principal>
+            <Dependent Role="TMatricula">
+              <PropertyRef Name="CodModulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="TCarrera_ReadAll_Result">
+          <Property Type="String" Name="CodCarrera" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="NomCarrera" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="TCarrera_ReadById_Result">
+          <Property Type="String" Name="CodCarrera" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="NomCarrera" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="TCurso_ReadAll_Result">
+          <Property Type="String" Name="CodCurso" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="NomCurso" Nullable="true" MaxLength="70" />
+          <Property Type="Int32" Name="Horas" Nullable="true" />
+          <Property Type="Int32" Name="Creditos" Nullable="true" />
+          <Property Type="String" Name="CodModulo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="TCurso_ReadById_Result">
+          <Property Type="String" Name="CodCurso" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="NomCurso" Nullable="true" MaxLength="70" />
+          <Property Type="Int32" Name="Horas" Nullable="true" />
+          <Property Type="Int32" Name="Creditos" Nullable="true" />
+          <Property Type="String" Name="CodModulo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="TDocente_ReadAll_Result">
+          <Property Type="String" Name="CodDocente" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Dni" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="ApePaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApeMaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="TDocente_ReadById_Result">
+          <Property Type="String" Name="CodDocente" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Dni" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="ApePaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApeMaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="TEstudiante_ReadAll_Result">
+          <Property Type="String" Name="CodEstudiante" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Dni" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="ApePaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApeMaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="TEstudiante_ReadById_Result">
+          <Property Type="String" Name="CodEstudiante" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Dni" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="ApePaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApeMaterno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="TMatricula_ReadAll_Result">
+          <Property Type="String" Name="CodMatricula" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="CodEstudiante" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="CodModulo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Semestre" Nullable="true" MaxLength="8" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="TMatricula_ReadById_Result">
+          <Property Type="String" Name="CodMatricula" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="CodEstudiante" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="CodModulo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Semestre" Nullable="true" MaxLength="8" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="TMatriculaSemetre_ReadAll_Result">
+          <Property Type="String" Name="CodMatriculaSemetre" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="CodMatricula" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodEstudiante" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodCurso" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodDocente" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Semestre" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="NomCurso" Nullable="true" MaxLength="70" />
+          <Property Type="Int32" Name="NotaPromedio" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="TMatriculaSemetre_ReadById_Result">
+          <Property Type="String" Name="CodMatriculaSemetre" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="CodMatricula" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodEstudiante" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodCurso" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="CodDocente" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Semestre" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="NomCurso" Nullable="true" MaxLength="70" />
+          <Property Type="Int32" Name="NotaPromedio" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="TModuloCarrera_ReadAll_Result">
+          <Property Type="String" Name="CodModulo" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="NroModulo" Nullable="true" />
+          <Property Type="String" Name="Semestre" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="TModuloCarrera_ReadById_Result">
+          <Property Type="String" Name="CodModulo" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CodCarrera" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="NroModulo" Nullable="true" />
+          <Property Type="String" Name="Semestre" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="Usuario_ReadAll_Result">
+          <Property Type="String" Name="CodUsuario" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="contraseña" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Tipo" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="Usuario_ReadById_Result">
+          <Property Type="String" Name="CodUsuario" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="contraseña" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Tipo" Nullable="true" MaxLength="20" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InstitutoKhipuModelStoreContainer" CdmEntityContainer="InstitutoKhipuEntities">
+          <EntitySetMapping Name="TCarrera">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.TCarrera">
+              <MappingFragment StoreEntitySet="TCarrera">
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="NomCarrera" ColumnName="NomCarrera" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TCurso">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.TCurso">
+              <MappingFragment StoreEntitySet="TCurso">
+                <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+                <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="Creditos" ColumnName="Creditos" />
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TDocente">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.TDocente">
+              <MappingFragment StoreEntitySet="TDocente">
+                <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEstudiante">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.TEstudiante">
+              <MappingFragment StoreEntitySet="TEstudiante">
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TMatricula">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.TMatricula">
+              <MappingFragment StoreEntitySet="TMatricula">
+                <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TMatriculaSemetre">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.TMatriculaSemetre">
+              <MappingFragment StoreEntitySet="TMatriculaSemetre">
+                <ScalarProperty Name="CodMatriculaSemetre" ColumnName="CodMatriculaSemetre" />
+                <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+                <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+                <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+                <ScalarProperty Name="NotaPromedio" ColumnName="NotaPromedio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TModuloCarrera">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.TModuloCarrera">
+              <MappingFragment StoreEntitySet="TModuloCarrera">
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="NroModulo" ColumnName="NroModulo" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="InstitutoKhipuModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="TCarrera_Create" FunctionName="InstitutoKhipuModel.Store.TCarrera_Create" />
+          <FunctionImportMapping FunctionImportName="TCarrera_Delete" FunctionName="InstitutoKhipuModel.Store.TCarrera_Delete" />
+          <FunctionImportMapping FunctionImportName="TCarrera_ReadAll" FunctionName="InstitutoKhipuModel.Store.TCarrera_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCarrera_ReadAll_Result">
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="NomCarrera" ColumnName="NomCarrera" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TCarrera_ReadById" FunctionName="InstitutoKhipuModel.Store.TCarrera_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCarrera_ReadById_Result">
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="NomCarrera" ColumnName="NomCarrera" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TCarrera_Update" FunctionName="InstitutoKhipuModel.Store.TCarrera_Update" />
+          <FunctionImportMapping FunctionImportName="TCurso_Create" FunctionName="InstitutoKhipuModel.Store.TCurso_Create" />
+          <FunctionImportMapping FunctionImportName="TCurso_Delete" FunctionName="InstitutoKhipuModel.Store.TCurso_Delete" />
+          <FunctionImportMapping FunctionImportName="TCurso_ReadAll" FunctionName="InstitutoKhipuModel.Store.TCurso_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCurso_ReadAll_Result">
+                <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+                <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="Creditos" ColumnName="Creditos" />
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TCurso_ReadById" FunctionName="InstitutoKhipuModel.Store.TCurso_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCurso_ReadById_Result">
+                <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+                <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="Creditos" ColumnName="Creditos" />
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TCurso_Update" FunctionName="InstitutoKhipuModel.Store.TCurso_Update" />
+          <FunctionImportMapping FunctionImportName="TDocente_Create" FunctionName="InstitutoKhipuModel.Store.TDocente_Create" />
+          <FunctionImportMapping FunctionImportName="TDocente_Delete" FunctionName="InstitutoKhipuModel.Store.TDocente_Delete" />
+          <FunctionImportMapping FunctionImportName="TDocente_ReadAll" FunctionName="InstitutoKhipuModel.Store.TDocente_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TDocente_ReadAll_Result">
+                <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TDocente_ReadById" FunctionName="InstitutoKhipuModel.Store.TDocente_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TDocente_ReadById_Result">
+                <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TDocente_Update" FunctionName="InstitutoKhipuModel.Store.TDocente_Update" />
+          <FunctionImportMapping FunctionImportName="TEstudiante_Create" FunctionName="InstitutoKhipuModel.Store.TEstudiante_Create" />
+          <FunctionImportMapping FunctionImportName="TEstudiante_Delete" FunctionName="InstitutoKhipuModel.Store.TEstudiante_Delete" />
+          <FunctionImportMapping FunctionImportName="TEstudiante_ReadAll" FunctionName="InstitutoKhipuModel.Store.TEstudiante_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TEstudiante_ReadAll_Result">
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TEstudiante_ReadById" FunctionName="InstitutoKhipuModel.Store.TEstudiante_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TEstudiante_ReadById_Result">
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TEstudiante_Update" FunctionName="InstitutoKhipuModel.Store.TEstudiante_Update" />
+          <FunctionImportMapping FunctionImportName="TMatricula_Create" FunctionName="InstitutoKhipuModel.Store.TMatricula_Create" />
+          <FunctionImportMapping FunctionImportName="TMatricula_Delete" FunctionName="InstitutoKhipuModel.Store.TMatricula_Delete" />
+          <FunctionImportMapping FunctionImportName="TMatricula_ReadAll" FunctionName="InstitutoKhipuModel.Store.TMatricula_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatricula_ReadAll_Result">
+                <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TMatricula_ReadById" FunctionName="InstitutoKhipuModel.Store.TMatricula_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatricula_ReadById_Result">
+                <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TMatricula_Update" FunctionName="InstitutoKhipuModel.Store.TMatricula_Update" />
+          <FunctionImportMapping FunctionImportName="TMatriculaSemetre_Create" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_Create" />
+          <FunctionImportMapping FunctionImportName="TMatriculaSemetre_Delete" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_Delete" />
+          <FunctionImportMapping FunctionImportName="TMatriculaSemetre_ReadAll" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatriculaSemetre_ReadAll_Result">
+                <ScalarProperty Name="CodMatriculaSemetre" ColumnName="CodMatriculaSemetre" />
+                <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+                <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+                <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+                <ScalarProperty Name="NotaPromedio" ColumnName="NotaPromedio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TMatriculaSemetre_ReadById" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatriculaSemetre_ReadById_Result">
+                <ScalarProperty Name="CodMatriculaSemetre" ColumnName="CodMatriculaSemetre" />
+                <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+                <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+                <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+                <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+                <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+                <ScalarProperty Name="NotaPromedio" ColumnName="NotaPromedio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TMatriculaSemetre_Update" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_Update" />
+          <FunctionImportMapping FunctionImportName="TModuloCarrera_Create" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_Create" />
+          <FunctionImportMapping FunctionImportName="TModuloCarrera_Delete" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_Delete" />
+          <FunctionImportMapping FunctionImportName="TModuloCarrera_ReadAll" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TModuloCarrera_ReadAll_Result">
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="NroModulo" ColumnName="NroModulo" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TModuloCarrera_ReadById" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.TModuloCarrera_ReadById_Result">
+                <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+                <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+                <ScalarProperty Name="NroModulo" ColumnName="NroModulo" />
+                <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TModuloCarrera_Update" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_Update" />
+          <FunctionImportMapping FunctionImportName="Usuario_Create" FunctionName="InstitutoKhipuModel.Store.Usuario_Create" />
+          <FunctionImportMapping FunctionImportName="Usuario_Delete" FunctionName="InstitutoKhipuModel.Store.Usuario_Delete" />
+          <FunctionImportMapping FunctionImportName="Usuario_ReadAll" FunctionName="InstitutoKhipuModel.Store.Usuario_ReadAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.Usuario_ReadAll_Result">
+                <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Usuario_ReadById" FunctionName="InstitutoKhipuModel.Store.Usuario_ReadById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstitutoKhipuModel.Usuario_ReadById_Result">
+                <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Usuario_Update" FunctionName="InstitutoKhipuModel.Store.Usuario_Update" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

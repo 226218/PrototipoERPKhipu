@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InstitutoKhipuModelStoreContainer" CdmEntityContainer="InstitutoKhipuEntities">
+    <EntitySetMapping Name="TCarrera">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.TCarrera">
+        <MappingFragment StoreEntitySet="TCarrera">
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="NomCarrera" ColumnName="NomCarrera" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCurso">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.TCurso">
+        <MappingFragment StoreEntitySet="TCurso">
+          <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+          <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="Creditos" ColumnName="Creditos" />
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDocente">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.TDocente">
+        <MappingFragment StoreEntitySet="TDocente">
+          <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+          <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEstudiante">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.TEstudiante">
+        <MappingFragment StoreEntitySet="TEstudiante">
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+          <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMatricula">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.TMatricula">
+        <MappingFragment StoreEntitySet="TMatricula">
+          <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMatriculaSemetre">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.TMatriculaSemetre">
+        <MappingFragment StoreEntitySet="TMatriculaSemetre">
+          <ScalarProperty Name="CodMatriculaSemetre" ColumnName="CodMatriculaSemetre" />
+          <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+          <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+          <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+          <ScalarProperty Name="NotaPromedio" ColumnName="NotaPromedio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TModuloCarrera">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.TModuloCarrera">
+        <MappingFragment StoreEntitySet="TModuloCarrera">
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="NroModulo" ColumnName="NroModulo" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="InstitutoKhipuModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="TCarrera_Create" FunctionName="InstitutoKhipuModel.Store.TCarrera_Create" />
+    <FunctionImportMapping FunctionImportName="TCarrera_Delete" FunctionName="InstitutoKhipuModel.Store.TCarrera_Delete" />
+    <FunctionImportMapping FunctionImportName="TCarrera_ReadAll" FunctionName="InstitutoKhipuModel.Store.TCarrera_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCarrera_ReadAll_Result">
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="NomCarrera" ColumnName="NomCarrera" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TCarrera_ReadById" FunctionName="InstitutoKhipuModel.Store.TCarrera_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCarrera_ReadById_Result">
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="NomCarrera" ColumnName="NomCarrera" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TCarrera_Update" FunctionName="InstitutoKhipuModel.Store.TCarrera_Update" />
+    <FunctionImportMapping FunctionImportName="TCurso_Create" FunctionName="InstitutoKhipuModel.Store.TCurso_Create" />
+    <FunctionImportMapping FunctionImportName="TCurso_Delete" FunctionName="InstitutoKhipuModel.Store.TCurso_Delete" />
+    <FunctionImportMapping FunctionImportName="TCurso_ReadAll" FunctionName="InstitutoKhipuModel.Store.TCurso_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCurso_ReadAll_Result">
+          <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+          <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="Creditos" ColumnName="Creditos" />
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TCurso_ReadById" FunctionName="InstitutoKhipuModel.Store.TCurso_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TCurso_ReadById_Result">
+          <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+          <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="Creditos" ColumnName="Creditos" />
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TCurso_Update" FunctionName="InstitutoKhipuModel.Store.TCurso_Update" />
+    <FunctionImportMapping FunctionImportName="TDocente_Create" FunctionName="InstitutoKhipuModel.Store.TDocente_Create" />
+    <FunctionImportMapping FunctionImportName="TDocente_Delete" FunctionName="InstitutoKhipuModel.Store.TDocente_Delete" />
+    <FunctionImportMapping FunctionImportName="TDocente_ReadAll" FunctionName="InstitutoKhipuModel.Store.TDocente_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TDocente_ReadAll_Result">
+          <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+          <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TDocente_ReadById" FunctionName="InstitutoKhipuModel.Store.TDocente_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TDocente_ReadById_Result">
+          <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+          <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TDocente_Update" FunctionName="InstitutoKhipuModel.Store.TDocente_Update" />
+    <FunctionImportMapping FunctionImportName="TEstudiante_Create" FunctionName="InstitutoKhipuModel.Store.TEstudiante_Create" />
+    <FunctionImportMapping FunctionImportName="TEstudiante_Delete" FunctionName="InstitutoKhipuModel.Store.TEstudiante_Delete" />
+    <FunctionImportMapping FunctionImportName="TEstudiante_ReadAll" FunctionName="InstitutoKhipuModel.Store.TEstudiante_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TEstudiante_ReadAll_Result">
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+          <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TEstudiante_ReadById" FunctionName="InstitutoKhipuModel.Store.TEstudiante_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TEstudiante_ReadById_Result">
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+          <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TEstudiante_Update" FunctionName="InstitutoKhipuModel.Store.TEstudiante_Update" />
+    <FunctionImportMapping FunctionImportName="TMatricula_Create" FunctionName="InstitutoKhipuModel.Store.TMatricula_Create" />
+    <FunctionImportMapping FunctionImportName="TMatricula_Delete" FunctionName="InstitutoKhipuModel.Store.TMatricula_Delete" />
+    <FunctionImportMapping FunctionImportName="TMatricula_ReadAll" FunctionName="InstitutoKhipuModel.Store.TMatricula_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatricula_ReadAll_Result">
+          <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TMatricula_ReadById" FunctionName="InstitutoKhipuModel.Store.TMatricula_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatricula_ReadById_Result">
+          <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TMatricula_Update" FunctionName="InstitutoKhipuModel.Store.TMatricula_Update" />
+    <FunctionImportMapping FunctionImportName="TMatriculaSemetre_Create" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_Create" />
+    <FunctionImportMapping FunctionImportName="TMatriculaSemetre_Delete" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_Delete" />
+    <FunctionImportMapping FunctionImportName="TMatriculaSemetre_ReadAll" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatriculaSemetre_ReadAll_Result">
+          <ScalarProperty Name="CodMatriculaSemetre" ColumnName="CodMatriculaSemetre" />
+          <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+          <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+          <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+          <ScalarProperty Name="NotaPromedio" ColumnName="NotaPromedio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TMatriculaSemetre_ReadById" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TMatriculaSemetre_ReadById_Result">
+          <ScalarProperty Name="CodMatriculaSemetre" ColumnName="CodMatriculaSemetre" />
+          <ScalarProperty Name="CodMatricula" ColumnName="CodMatricula" />
+          <ScalarProperty Name="CodEstudiante" ColumnName="CodEstudiante" />
+          <ScalarProperty Name="CodCurso" ColumnName="CodCurso" />
+          <ScalarProperty Name="CodDocente" ColumnName="CodDocente" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+          <ScalarProperty Name="NomCurso" ColumnName="NomCurso" />
+          <ScalarProperty Name="NotaPromedio" ColumnName="NotaPromedio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TMatriculaSemetre_Update" FunctionName="InstitutoKhipuModel.Store.TMatriculaSemetre_Update" />
+    <FunctionImportMapping FunctionImportName="TModuloCarrera_Create" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_Create" />
+    <FunctionImportMapping FunctionImportName="TModuloCarrera_Delete" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_Delete" />
+    <FunctionImportMapping FunctionImportName="TModuloCarrera_ReadAll" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TModuloCarrera_ReadAll_Result">
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="NroModulo" ColumnName="NroModulo" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TModuloCarrera_ReadById" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.TModuloCarrera_ReadById_Result">
+          <ScalarProperty Name="CodModulo" ColumnName="CodModulo" />
+          <ScalarProperty Name="CodCarrera" ColumnName="CodCarrera" />
+          <ScalarProperty Name="NroModulo" ColumnName="NroModulo" />
+          <ScalarProperty Name="Semestre" ColumnName="Semestre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TModuloCarrera_Update" FunctionName="InstitutoKhipuModel.Store.TModuloCarrera_Update" />
+    <FunctionImportMapping FunctionImportName="Usuario_Create" FunctionName="InstitutoKhipuModel.Store.Usuario_Create" />
+    <FunctionImportMapping FunctionImportName="Usuario_Delete" FunctionName="InstitutoKhipuModel.Store.Usuario_Delete" />
+    <FunctionImportMapping FunctionImportName="Usuario_ReadAll" FunctionName="InstitutoKhipuModel.Store.Usuario_ReadAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.Usuario_ReadAll_Result">
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usuario_ReadById" FunctionName="InstitutoKhipuModel.Store.Usuario_ReadById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoKhipuModel.Usuario_ReadById_Result">
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usuario_Update" FunctionName="InstitutoKhipuModel.Store.Usuario_Update" />
+  </EntityContainerMapping>
+</Mapping>

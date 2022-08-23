@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1628/HostInstitutoKhipu/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" />
+  <xs:element name="insertarTCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q1:TCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarTCarreraResult" nillable="true" type="q2:TCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q3:TCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarTCarreraResult" nillable="true" type="q4:TCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q5:TCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarTCarreraResult" nillable="true" type="q6:TCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodCarrera" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTCarreraResult" nillable="true" type="q7:TCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCarreras">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCarrerasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTCarrerasResult" nillable="true" type="q8:ListaTCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q9:TCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarTCursoResult" nillable="true" type="q10:TCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q11:TCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarTCursoResult" nillable="true" type="q12:TCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q13:TCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarTCursoResult" nillable="true" type="q14:TCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodCurso" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTCursoResult" nillable="true" type="q15:TCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCursos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTCursosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTCursosResult" nillable="true" type="q16:ListaTCurso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTDocente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q17:TDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTDocenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarTDocenteResult" nillable="true" type="q18:TDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTDocente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q19:TDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTDocenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarTDocenteResult" nillable="true" type="q20:TDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTDocente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q21:TDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTDocenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarTDocenteResult" nillable="true" type="q22:TDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTDocente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodDocente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTDocenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTDocenteResult" nillable="true" type="q23:TDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTDocentes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTDocentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTDocentesResult" nillable="true" type="q24:ListaTDocente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTEstudiante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q25:TEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTEstudianteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarTEstudianteResult" nillable="true" type="q26:TEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTEstudiante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q27:TEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTEstudianteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarTEstudianteResult" nillable="true" type="q28:TEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTEstudiante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q29:TEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTEstudianteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarTEstudianteResult" nillable="true" type="q30:TEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTEstudiante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEstudiante" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTEstudianteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTEstudianteResult" nillable="true" type="q31:TEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTEstudiantes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTEstudiantesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTEstudiantesResult" nillable="true" type="q32:ListaTEstudiante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTMatricula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q33:TMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTMatriculaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarTMatriculaResult" nillable="true" type="q34:TMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTMatricula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q35:TMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTMatriculaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarTMatriculaResult" nillable="true" type="q36:TMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTMatricula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q37:TMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTMatriculaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarTMatriculaResult" nillable="true" type="q38:TMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatricula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodMatricula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatriculaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTMatriculaResult" nillable="true" type="q39:TMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatriculas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatriculasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTMatriculasResult" nillable="true" type="q40:ListaTMatricula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTMatriculaSemetre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q41:TMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTMatriculaSemetreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarTMatriculaSemetreResult" nillable="true" type="q42:TMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTMatriculaSemetre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q43:TMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTMatriculaSemetreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarTMatriculaSemetreResult" nillable="true" type="q44:TMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTMatriculaSemetre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q45:TMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTMatriculaSemetreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarTMatriculaSemetreResult" nillable="true" type="q46:TMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatriculaSemetre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodMatriculaSemetre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatriculaSemetreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTMatriculaSemetreResult" nillable="true" type="q47:TMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatriculaSemetres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTMatriculaSemetresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTMatriculaSemetresResult" nillable="true" type="q48:ListaTMatriculaSemetre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTModuloCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q49:TModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarTModuloCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarTModuloCarreraResult" nillable="true" type="q50:TModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTModuloCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q51:TModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarTModuloCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarTModuloCarreraResult" nillable="true" type="q52:TModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTModuloCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q53:TModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarTModuloCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarTModuloCarreraResult" nillable="true" type="q54:TModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTModuloCarrera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodModulo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTModuloCarreraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTModuloCarreraResult" nillable="true" type="q55:TModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTModuloCarreras">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeleccionarTModuloCarrerasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="SeleccionarTModuloCarrerasResult" nillable="true" type="q56:ListaTModuloCarrera" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q57:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="insertarUsuarioResult" nillable="true" type="q58:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q59:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="actualizarUsuarioResult" nillable="true" type="q60:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="request" nillable="true" type="q61:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eliminarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" minOccurs="0" name="eliminarUsuarioResult" nillable="true" type="q62:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ingresar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pcontraseña" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ingresarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ingresarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

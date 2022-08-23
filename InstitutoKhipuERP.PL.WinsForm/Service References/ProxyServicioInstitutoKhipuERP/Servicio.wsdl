@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Servicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1628/HostInstitutoKhipu/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1628/HostInstitutoKhipu/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1628/HostInstitutoKhipu/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InstitutoKhipuERP.SL.DataContract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCarreras_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCarreras" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCarreras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCarrerasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTCurso" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTCurso" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTCurso" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCurso" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCursos_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCursos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTCursos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTCursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTDocente" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTDocente" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTDocente" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTDocente_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTDocente" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTDocente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTDocentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTDocentes" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTDocentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTDocentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTEstudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTEstudiante" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTEstudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTEstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTEstudiantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTEstudiantes" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTEstudiantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTEstudiantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTMatricula_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTMatricula" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTMatricula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTMatriculaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTMatricula_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTMatricula" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTMatricula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTMatriculaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTMatricula_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTMatricula" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTMatricula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTMatriculaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatricula_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatricula" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatricula_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatriculaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatriculas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatriculas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatriculas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatriculasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTMatriculaSemetre_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTMatriculaSemetre" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTMatriculaSemetre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTMatriculaSemetreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTMatriculaSemetre_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTMatriculaSemetre" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTMatriculaSemetre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTMatriculaSemetreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTMatriculaSemetre_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTMatriculaSemetre" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTMatriculaSemetre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTMatriculaSemetreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatriculaSemetre_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatriculaSemetre" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatriculaSemetre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatriculaSemetreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatriculaSemetres_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatriculaSemetres" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTMatriculaSemetres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTMatriculaSemetresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTModuloCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTModuloCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarTModuloCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarTModuloCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTModuloCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTModuloCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarTModuloCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarTModuloCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTModuloCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTModuloCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarTModuloCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTModuloCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTModuloCarrera_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTModuloCarrera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTModuloCarrera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTModuloCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTModuloCarreras_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTModuloCarreras" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_SeleccionarTModuloCarreras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeleccionarTModuloCarrerasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_insertarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_actualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_eliminarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_ingresar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ingresar" />
+  </wsdl:message>
+  <wsdl:message name="IServicioInstitutoKhipu_ingresar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ingresarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioInstitutoKhipu">
+    <wsdl:operation name="insertarTCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTCarrera" message="tns:IServicioInstitutoKhipu_insertarTCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTCarreraResponse" message="tns:IServicioInstitutoKhipu_insertarTCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTCarrera" message="tns:IServicioInstitutoKhipu_actualizarTCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTCarreraResponse" message="tns:IServicioInstitutoKhipu_actualizarTCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTCarrera" message="tns:IServicioInstitutoKhipu_eliminarTCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTCarreraResponse" message="tns:IServicioInstitutoKhipu_eliminarTCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCarrera" message="tns:IServicioInstitutoKhipu_SeleccionarTCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCarreraResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCarreras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCarreras" message="tns:IServicioInstitutoKhipu_SeleccionarTCarreras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCarrerasResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTCarreras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarTCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTCurso" message="tns:IServicioInstitutoKhipu_insertarTCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTCursoResponse" message="tns:IServicioInstitutoKhipu_insertarTCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTCurso" message="tns:IServicioInstitutoKhipu_actualizarTCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTCursoResponse" message="tns:IServicioInstitutoKhipu_actualizarTCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTCurso" message="tns:IServicioInstitutoKhipu_eliminarTCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTCursoResponse" message="tns:IServicioInstitutoKhipu_eliminarTCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCurso" message="tns:IServicioInstitutoKhipu_SeleccionarTCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCursoResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCursos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCursos" message="tns:IServicioInstitutoKhipu_SeleccionarTCursos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCursosResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTCursos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarTDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTDocente" message="tns:IServicioInstitutoKhipu_insertarTDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTDocenteResponse" message="tns:IServicioInstitutoKhipu_insertarTDocente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTDocente" message="tns:IServicioInstitutoKhipu_actualizarTDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTDocenteResponse" message="tns:IServicioInstitutoKhipu_actualizarTDocente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTDocente" message="tns:IServicioInstitutoKhipu_eliminarTDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTDocenteResponse" message="tns:IServicioInstitutoKhipu_eliminarTDocente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTDocente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTDocente" message="tns:IServicioInstitutoKhipu_SeleccionarTDocente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTDocenteResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTDocente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTDocentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTDocentes" message="tns:IServicioInstitutoKhipu_SeleccionarTDocentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTDocentesResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTDocentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarTEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTEstudiante" message="tns:IServicioInstitutoKhipu_insertarTEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTEstudianteResponse" message="tns:IServicioInstitutoKhipu_insertarTEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTEstudiante" message="tns:IServicioInstitutoKhipu_actualizarTEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTEstudianteResponse" message="tns:IServicioInstitutoKhipu_actualizarTEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTEstudiante" message="tns:IServicioInstitutoKhipu_eliminarTEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTEstudianteResponse" message="tns:IServicioInstitutoKhipu_eliminarTEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTEstudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTEstudiante" message="tns:IServicioInstitutoKhipu_SeleccionarTEstudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTEstudianteResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTEstudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTEstudiantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTEstudiantes" message="tns:IServicioInstitutoKhipu_SeleccionarTEstudiantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTEstudiantesResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTEstudiantes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarTMatricula">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTMatricula" message="tns:IServicioInstitutoKhipu_insertarTMatricula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTMatriculaResponse" message="tns:IServicioInstitutoKhipu_insertarTMatricula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTMatricula">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTMatricula" message="tns:IServicioInstitutoKhipu_actualizarTMatricula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTMatriculaResponse" message="tns:IServicioInstitutoKhipu_actualizarTMatricula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTMatricula">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTMatricula" message="tns:IServicioInstitutoKhipu_eliminarTMatricula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTMatriculaResponse" message="tns:IServicioInstitutoKhipu_eliminarTMatricula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatricula">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatricula" message="tns:IServicioInstitutoKhipu_SeleccionarTMatricula_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculaResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTMatricula_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatriculas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculas" message="tns:IServicioInstitutoKhipu_SeleccionarTMatriculas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculasResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTMatriculas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarTMatriculaSemetre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTMatriculaSemetre" message="tns:IServicioInstitutoKhipu_insertarTMatriculaSemetre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTMatriculaSemetreResponse" message="tns:IServicioInstitutoKhipu_insertarTMatriculaSemetre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTMatriculaSemetre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTMatriculaSemetre" message="tns:IServicioInstitutoKhipu_actualizarTMatriculaSemetre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTMatriculaSemetreResponse" message="tns:IServicioInstitutoKhipu_actualizarTMatriculaSemetre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTMatriculaSemetre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTMatriculaSemetre" message="tns:IServicioInstitutoKhipu_eliminarTMatriculaSemetre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTMatriculaSemetreResponse" message="tns:IServicioInstitutoKhipu_eliminarTMatriculaSemetre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatriculaSemetre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculaSemetre" message="tns:IServicioInstitutoKhipu_SeleccionarTMatriculaSemetre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculaSemetreResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTMatriculaSemetre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatriculaSemetres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculaSemetres" message="tns:IServicioInstitutoKhipu_SeleccionarTMatriculaSemetres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculaSemetresResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTMatriculaSemetres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarTModuloCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTModuloCarrera" message="tns:IServicioInstitutoKhipu_insertarTModuloCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarTModuloCarreraResponse" message="tns:IServicioInstitutoKhipu_insertarTModuloCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTModuloCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTModuloCarrera" message="tns:IServicioInstitutoKhipu_actualizarTModuloCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarTModuloCarreraResponse" message="tns:IServicioInstitutoKhipu_actualizarTModuloCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTModuloCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTModuloCarrera" message="tns:IServicioInstitutoKhipu_eliminarTModuloCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarTModuloCarreraResponse" message="tns:IServicioInstitutoKhipu_eliminarTModuloCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTModuloCarrera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTModuloCarrera" message="tns:IServicioInstitutoKhipu_SeleccionarTModuloCarrera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTModuloCarreraResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTModuloCarrera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTModuloCarreras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTModuloCarreras" message="tns:IServicioInstitutoKhipu_SeleccionarTModuloCarreras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTModuloCarrerasResponse" message="tns:IServicioInstitutoKhipu_SeleccionarTModuloCarreras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarUsuario" message="tns:IServicioInstitutoKhipu_insertarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/insertarUsuarioResponse" message="tns:IServicioInstitutoKhipu_insertarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarUsuario" message="tns:IServicioInstitutoKhipu_actualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/actualizarUsuarioResponse" message="tns:IServicioInstitutoKhipu_actualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarUsuario" message="tns:IServicioInstitutoKhipu_eliminarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/eliminarUsuarioResponse" message="tns:IServicioInstitutoKhipu_eliminarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/ingresar" message="tns:IServicioInstitutoKhipu_ingresar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioInstitutoKhipu/ingresarResponse" message="tns:IServicioInstitutoKhipu_ingresar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioInstitutoKhipu" type="tns:IServicioInstitutoKhipu">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertarTCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarTCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarTCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarTCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCarreras">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCarreras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarTCurso">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarTCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTCurso">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarTCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTCurso">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarTCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCurso">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTCursos">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarTDocente">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarTDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTDocente">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarTDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTDocente">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarTDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTDocente">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTDocentes">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTDocentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarTEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarTEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarTEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarTEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTEstudiante">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTEstudiantes">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTEstudiantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarTMatricula">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarTMatricula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTMatricula">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarTMatricula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTMatricula">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarTMatricula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatricula">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatricula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatriculas">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarTMatriculaSemetre">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarTMatriculaSemetre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTMatriculaSemetre">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarTMatriculaSemetre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTMatriculaSemetre">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarTMatriculaSemetre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatriculaSemetre">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculaSemetre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTMatriculaSemetres">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTMatriculaSemetres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarTModuloCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarTModuloCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTModuloCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarTModuloCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTModuloCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarTModuloCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTModuloCarrera">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTModuloCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionarTModuloCarreras">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/SeleccionarTModuloCarreras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/insertarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/actualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/eliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar">
+      <soap:operation soapAction="http://tempuri.org/IServicioInstitutoKhipu/ingresar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicio">
+    <wsdl:port name="BasicHttpBinding_IServicioInstitutoKhipu" binding="tns:BasicHttpBinding_IServicioInstitutoKhipu">
+      <soap:address location="http://localhost:1628/HostInstitutoKhipu/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

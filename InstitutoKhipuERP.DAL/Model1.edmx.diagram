@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="08f6b53f3fc844b8a6d2531fc4d8febc" Name="Diagrama1" ZoomLevel="85">
+        <EntityTypeShape EntityType="InstitutoKhipuModel.TCarrera" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoKhipuModel.TCurso" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoKhipuModel.TDocente" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoKhipuModel.TEstudiante" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoKhipuModel.TMatricula" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoKhipuModel.TMatriculaSemetre" Width="1.5" PointX="10.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoKhipuModel.TModuloCarrera" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoKhipuModel.Usuario" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TCurso__CodCarre__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TEstudian__CodCa__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TMatricul__CodCa__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TModuloCa__CodCa__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TCurso__CodModul__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TMatricul__CodCu__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TMatricul__CodDo__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TMatricul__CodEs__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TMatricul__CodEs__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TMatricul__CodMa__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoKhipuModel.FK__TMatricul__CodMo__45F365D3" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

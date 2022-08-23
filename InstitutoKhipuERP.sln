@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{C28D7F04-EEDD-4ACB-948D-074ADC92452B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{184E81B3-474B-4BEF-A136-F45897873E4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SL", "SL", "{107BEBD5-E5DC-43CD-A779-FFC31AEEF84C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PL", "PL", "{E3E421B2-5E77-4B53-B8EA-E6FED1704829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstitutoKhipuERP.DAL", "InstitutoKhipuERP.DAL\InstitutoKhipuERP.DAL.csproj", "{E654CC5E-26D2-4324-A04F-DCD482DBA1B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstitutoKhipuERP.BL", "InstitutoKhipuERP.BL\InstitutoKhipuERP.BL.csproj", "{AD81FC53-E882-42DB-A422-DD8CF2ACA8AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstitutoKhipuERP.SL", "InstitutoKhipuERP.SL\InstitutoKhipuERP.SL.csproj", "{2B4623E8-CA79-4464-A5E8-73E432C0D3E2}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HostInstitutoKhipu", "HostInstitutoKhipu\", "{7CBF2C53-DBF0-45C0-85A9-85DE91A355D7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/HostInstitutoKhipu"
+		Debug.AspNetCompiler.PhysicalPath = "HostInstitutoKhipu\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\HostInstitutoKhipu\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/HostInstitutoKhipu"
+		Release.AspNetCompiler.PhysicalPath = "HostInstitutoKhipu\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\HostInstitutoKhipu\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1628"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstitutoKhipuERP.PL.WinsForm", "InstitutoKhipuERP.PL.WinsForm\InstitutoKhipuERP.PL.WinsForm.csproj", "{E8379A78-955B-4586-9DEB-A9E8975DD0E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CBF2C53-DBF0-45C0-85A9-85DE91A355D7} = {7CBF2C53-DBF0-45C0-85A9-85DE91A355D7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E654CC5E-26D2-4324-A04F-DCD482DBA1B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E654CC5E-26D2-4324-A04F-DCD482DBA1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E654CC5E-26D2-4324-A04F-DCD482DBA1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E654CC5E-26D2-4324-A04F-DCD482DBA1B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD81FC53-E882-42DB-A422-DD8CF2ACA8AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD81FC53-E882-42DB-A422-DD8CF2ACA8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD81FC53-E882-42DB-A422-DD8CF2ACA8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD81FC53-E882-42DB-A422-DD8CF2ACA8AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4623E8-CA79-4464-A5E8-73E432C0D3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4623E8-CA79-4464-A5E8-73E432C0D3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4623E8-CA79-4464-A5E8-73E432C0D3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4623E8-CA79-4464-A5E8-73E432C0D3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBF2C53-DBF0-45C0-85A9-85DE91A355D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBF2C53-DBF0-45C0-85A9-85DE91A355D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBF2C53-DBF0-45C0-85A9-85DE91A355D7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBF2C53-DBF0-45C0-85A9-85DE91A355D7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E8379A78-955B-4586-9DEB-A9E8975DD0E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8379A78-955B-4586-9DEB-A9E8975DD0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8379A78-955B-4586-9DEB-A9E8975DD0E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8379A78-955B-4586-9DEB-A9E8975DD0E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E654CC5E-26D2-4324-A04F-DCD482DBA1B0} = {C28D7F04-EEDD-4ACB-948D-074ADC92452B}
+		{AD81FC53-E882-42DB-A422-DD8CF2ACA8AC} = {184E81B3-474B-4BEF-A136-F45897873E4D}
+		{2B4623E8-CA79-4464-A5E8-73E432C0D3E2} = {107BEBD5-E5DC-43CD-A779-FFC31AEEF84C}
+		{7CBF2C53-DBF0-45C0-85A9-85DE91A355D7} = {107BEBD5-E5DC-43CD-A779-FFC31AEEF84C}
+		{E8379A78-955B-4586-9DEB-A9E8975DD0E7} = {E3E421B2-5E77-4B53-B8EA-E6FED1704829}
+	EndGlobalSection
+EndGlobal

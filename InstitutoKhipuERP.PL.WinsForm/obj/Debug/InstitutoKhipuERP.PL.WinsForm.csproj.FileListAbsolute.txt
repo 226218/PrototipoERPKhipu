@@ -1,0 +1,87 @@
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.csprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormAdministrativo.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneCarrera.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.Matricula.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.Notas.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Login.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Main_Form.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Properties.Resources.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.csproj.GenerateResource.Cache
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormDocente.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormMantieneEstudiante.resources
+C:\Users\CCFF\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+C:\Users\CCFF\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+C:\Users\CCFF\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.csprojResolveAssemblyReference.cache
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormAdministrativo.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormDocente.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormEstudiante.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneCursos.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneDocente.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormMantieneEstudiante.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneCarrera.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneMatriculas.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneModulo.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.Matricula.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.Notas.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Login.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Main_Form.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Properties.Resources.resources
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.csproj.GenerateResource.Cache
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\RdlCompile.cache
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\RdlCompile.compiled
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+D:\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormEstudiante.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneCursos.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneDocente.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneMatriculas.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneModulo.resources
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\RdlCompile.cache
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\RdlCompile.compiled
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormAdministrativo.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormDocente.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormEstudiante.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneCursos.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneDocente.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.FormMantieneEstudiante.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneCarrera.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneMatriculas.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.FormMantieneModulo.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.Matricula.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Formularios.Notas.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Login.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Main_Form.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.Properties.Resources.resources
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\RdlCompile.cache
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\RdlCompile.compiled
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+C:\Users\user\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+G:\ \InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+G:\ \InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+G:\ \InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+F:\ \.Trashes\ \Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+F:\ \.Trashes\ \Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+F:\ \.Trashes\ \Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+H:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+H:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+H:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+G:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+G:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+G:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb
+F:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\bin\Debug\InstitutoKhipuERP.PL.WinsForm.exe.config
+F:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.exe
+F:\8vo Semestre\Cursos 8vo semestre\Asti\InstitutoKhipuERP\InstitutoKhipuERP.PL.WinsForm\obj\Debug\InstitutoKhipuERP.PL.WinsForm.pdb

@@ -1,0 +1,15 @@
+C:\Users\RaPzoD1\Desktop\InstitutoKhipuERP\HostInstitutoKhipu\Bin\InstitutoKhipuERP.SL.dll
+C:\Users\RaPzoD1\Desktop\InstitutoKhipuERP\HostInstitutoKhipu\Bin\InstitutoKhipuERP.SL.pdb
+C:\Users\RaPzoD1\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.csprojResolveAssemblyReference.cache
+C:\Users\RaPzoD1\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.dll
+C:\Users\RaPzoD1\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.pdb
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.csprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.dll
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.pdb
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\HostInstitutoKhipu\Bin\InstitutoKhipuERP.SL.dll
+C:\Users\USUARIO\Desktop\InstitutoKhipuERP\HostInstitutoKhipu\Bin\InstitutoKhipuERP.SL.pdb
+D:\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.csprojResolveAssemblyReference.cache
+D:\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.dll
+D:\InstitutoKhipuERP\HostInstitutoKhipu\Bin\InstitutoKhipuERP.SL.dll
+D:\InstitutoKhipuERP\HostInstitutoKhipu\Bin\InstitutoKhipuERP.SL.pdb
+D:\InstitutoKhipuERP\InstitutoKhipuERP.SL\obj\Debug\InstitutoKhipuERP.SL.pdb
